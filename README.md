@@ -1,2 +1,1 @@
-# VanillaSuper
 Ванильный Minecraft сервер
