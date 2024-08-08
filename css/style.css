@@ -20,6 +20,11 @@ body {
     width: 32px;
     height: auto;
 }
+
+.preloader {
+    background: red; /* Временное изменение цвета */
+}
+
   
 
   .title {
