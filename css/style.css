@@ -1,5 +1,3 @@
-
-
 body {
     background-color: rgb(23, 23, 23);
     font-family: "Unbounded", sans-serif;
@@ -16,6 +14,41 @@ body {
     right: 7%;
 }
 
+/* Ширина скроллбара */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Дорожка скроллбара */
+::-webkit-scrollbar-track {
+    background: #2e2e2e;
+    border-radius: 13px;
+}
+
+/* Ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+/* Ползунок при наведении
+::-webkit-scrollbar-thumb:hover {
+    background: #cdcdcd;
+} */
+::-webkit-scrollbar-thumb {
+    background: #929292;
+    border-radius: 7px;
+}
+
+.img2 {
+    width: 5%;
+    height: auto;
+    vertical-align: middle;
+    position: absolute;
+    top: 150%;
+    right: 48%;
+}
+
 .footer {
     background-color: rgba(47, 47, 47, 0.26);
     border-radius: 15px;
@@ -27,14 +60,46 @@ body {
     margin-right: auto;
 }
 
-.img9 {
-    width: 28%;
-    height: auto;
-    filter: drop-shadow(0px 0px 50px rgba(131, 131, 131, 0.236));
-    vertical-align: middle;
-    position: absolute;
-    top: 17%;
-    right: 7%;    
+@media (max-width: 1200px) {
+    .footer {
+        width: 1300px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        width: 1100px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        width: 900px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .footer p{
+        margin-left: 100px;
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer p{
+        margin-left: 90px;
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer p{
+        margin-left: 50px;
+        font-size: 15px;
+    }
 }
 
 .logo-header {
@@ -93,6 +158,24 @@ body {
     color: rgba(255, 255, 255, 0.321);
 }
 
+@media (max-width: 1200px) {
+    .footer-title-sm {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-title-sm {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-title-sm {
+        font-size: 8px;
+    }
+}
+
 .footer-title-mini {
     font-family: 'Golos Text';
     font-style: normal;
@@ -104,31 +187,6 @@ body {
     margin-bottom: -0px;
     color: rgba(255, 255, 255, 0.542);
 }
-
-/* .footer-des-links {
-    font-family: 'Golos Text';
-    font-style: normal;
-    font-size: 19px;
-    font-weight: 400;
-    font-display: swap;
-    margin-left: 60px;
-    margin-top: 30px;
-    margin-bottom: -0px;
-    color: rgba(255, 255, 255, 0.773);
-}
-
-.footer-des-links:hover {
-    font-family: 'Golos Text';
-    font-style: normal;
-    font-size: 19px;
-    font-weight: 400;
-    font-display: swap;
-    margin-left: 60px;
-    margin-top: 90px;
-    margin-bottom: 10px;
-    color: rgba(255, 255, 255, 0.599);
-} */
-
 
 .footer-des {
     font-family: 'Golos Text';
@@ -142,37 +200,47 @@ body {
     color: rgba(255, 255, 255, 0.923);
 }
 
-  .title {
+.title {
     font-family: 'Unbounded';
     font-style: normal;
-    font-size: 50px;
+    font-size: 70px;
     font-weight: 500;
     font-display: swap;
     margin-left: 260px;
     margin-top: 100px;
-    margin-bottom: -0px;
+    margin-bottom: 0px;
     color: white;
 }
 
-.title_start {
-    font-family: 'Unbounded';
-    font-style: normal;
-    font-size: 50px;
-    font-weight: 500;
-    font-display: swap;
-    margin-left: 260px;
-    margin-top: 250px;
-    margin-bottom: -0px;
-    color: white;
+@media (max-width: 1200px) {
+    .title {
+        font-size: 50px;
+        margin-left: 200px;
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 40px;
+        margin-left: 150px;
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 30px;
+        margin-left: 100px;
+    }
 }
 
 .title_gr {
     font-family: 'Unbounded';
     font-style: normal;
-    font-size: 50px;
+    font-size: 70px;
     font-weight: 500;
     font-display: swap;
-    margin-left: 260px;
     margin-top: 1px;
     color: white;
     background: linear-gradient(120deg, #a7ff87, #43ff49e8);
@@ -180,23 +248,31 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.title_gr2 {
-    font-family: 'Unbounded';
-    font-style: normal;
-    font-size: 50px;
-    font-weight: 500;
-    font-display: swap;
-    margin-top: 1px;
-    color: white;
-    background: linear-gradient(120deg, #a7ff87, #43ff49e8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+@media (max-width: 1200px) {
+    .title_gr {
+        font-size: 50px;
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title_gr {
+        font-size: 40px;
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title_gr {
+        font-size: 30px;
+        margin-top: 40px;
+    }
 }
 
 .exp_gr {
     font-family: 'Golos text';
     font-style: normal;
-    font-size: 40px;
+    font-size: 45px;
     font-weight: 700;
     font-display: swap;
     margin-top: 1px;
@@ -206,23 +282,42 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
+@media (max-width: 1200px) {
+    .exp_gr {
+        font-size: 50px;
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .exp_gr {
+        font-size: 40px;
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .exp_gr {
+        font-size: 30px;
+    }
+}
+
 .what {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .header {
-    background-color: rgba(23, 23, 23, 0.703);
+    background-color: rgba(23, 23, 23, 0.855);
     border-radius: 0px;
     padding-top: 30px;
     padding-bottom: 20px;
     margin-bottom: 50px;
     position: fixed;
     top: 0;
-    border:1px solid #89898926;
+    border:2px solid #89898926;
     z-index: 100;
     width: 150%;
-    backdrop-filter: blur(10px)
-    
+    backdrop-filter: blur(30px)
 }
 
 .white-text-title {
@@ -233,109 +328,138 @@ body {
     color: white;
 }
 
-.mechanics {
+.cause3 {
     background-color: rgba(47, 47, 47, 0.596);
     border-radius: 15px;
     width: 1000px;
-    height: 180px;
+    height: 130px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 30px;
     margin-bottom: 50px;
-}
-
-.mechanics:hover {
-    background-color: rgba(47, 47, 47, 0.596);
-    border-radius: 15px;
-    width: 1000px;
-    height: 150px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    border:1px solid #60ff82db;
-    margin-left: auto;
+    border: 3px solid rgba(129, 129, 129, 0.236);
     cursor: pointer;
-    margin-right: auto;
+    box-shadow: 0 0 70px rgba(145, 145, 145, 0.069);
+    transition: 0.4s;
 }
 
-.mechanics p {
+.cause3:hover {
+    transform: scale(1.03);
+    border: 3px solid rgba(174, 255, 160, 0.236);
+}
+
+.cause3 p {
     text-align: center;
     margin-left: 100px;
     margin-right: 100px
 }
 
-.div-ready-to-join {
+@media (max-width: 1200px) {
+    .cause3 {
+        width: 800px;
+        height: 130px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cause3 {
+        width: 600px;
+        height: 110px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cause3 {
+        width: 300px;
+        height: 240px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .cause3 p{
+        text-align: center;
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cause3 p{
+        text-align: center;
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cause3 p{
+        text-align: center;
+        font-size: 15px;
+    }
+}
+
+.cause1 {
     background-color: rgba(47, 47, 47, 0.596);
     border-radius: 15px;
-    width: 900px;
-    height: 400px;
+    width: 1000px;
+    border: 3px solid rgba(129, 129, 129, 0.236);
+    height: 130px;
     margin-left: auto;
+    cursor: pointer;
+    box-shadow: 0 0 70px rgba(145, 145, 145, 0.069);
     margin-right: auto;
     padding-top: 30px;
     margin-bottom: 50px;
-    transition: color 0.5s ease; /* время и тип перехода */
-    cursor: pointer;
+    transition: 0.4s;
 }
 
-.free {
-    background-color: rgba(47, 47, 47, 0.596);
-    border-radius: 15px;
-    width: 1000px;
-    height: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 30px;
-    margin-bottom: 50px;
-    transition: color 0.5s ease; /* время и тип перехода */
-    cursor: pointer;
+@media (max-width: 1200px) {
+    .cause1 {
+        width: 800px;
+        height: 130px;
+    }
 }
 
-.free:hover {
-    background-color: rgba(47, 47, 47, 0.596);
-    border-radius: 15px;
-    width: 1000px;
-    height: 150px;
-    cursor: pointer;
-    margin-left: auto;
-    margin-right: auto;
-    border:1px solid #60ff82db;
-    padding-top: 30px;
-    margin-bottom: 50px;
+@media (max-width: 768px) {
+    .cause1 {
+        width: 600px;
+        height: 110px;
+    }
 }
 
-.free p {
-    text-align: center;
-    margin-left: 100px;
-    margin-right: 100px
+@media (max-width: 480px) {
+    .cause1 {
+        width: 300px;
+        height: 240px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .cause1 p{
+        text-align: center;
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cause1 p{
+        text-align: center;
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cause1 p{
+        text-align: center;
+        font-size: 15px;
+    }
+}
+
+.cause1:hover {
+    transform: scale(1.03);
+    border: 3px solid rgba(174, 255, 160, 0.236);
 }
 
 
-.stop_div {
-    background-color: rgba(47, 47, 47, 0.596);
-    border-radius: 15px;
-    width: 1000px;
-    height: 190px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 40px;
-    margin-bottom: 50px;
-    transition: color 0.5s ease; /* время и тип перехода */
-}
-
-.stop_div:hover {
-    background-color: rgba(47, 47, 47, 0.596);
-    border-radius: 15px;
-    width: 1000px;
-    height: 190px;
-    border:1px solid #ff6060db;
-    margin-left: auto;
-    cursor: not-allowed;
-    margin-right: auto;
-    padding-top: 40px;
-    background-color: rgba(47, 47, 47, 0.596);
-    margin-bottom: 50px;
-}
-
-.stop_div p {
+.cause1 p {
     text-align: center;
     margin-left: 100px;
     margin-right: 100px
@@ -346,45 +470,13 @@ body {
     font-size: 1px;
 }
 
-.go-div:hover {
-    background-color: rgba(47, 47, 47, 0.596);
-    border-radius: 15px;
-    width: 1000px;
-    height: 190px;
-    border:1px solid #78ff60db;
-    margin-left: auto;
-    cursor: pointer;
-    margin-right: auto;
-    padding-top: 40px;
-    background-color: rgba(47, 47, 47, 0.596);
-    margin-bottom: 50px;
-}
-
 .go-div p {
     text-align: center;
     margin-left: 100px;
     margin-right: 100px
 }
 
-.go-div {
-    background-color: rgba(47, 47, 47, 0.596);
-    border-radius: 15px;
-    width: 1000px;
-    height: 190px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 40px;
-    margin-bottom: 50px;
-    transition: color 0.5s ease; /* время и тип перехода */
-}
-
-.go-div p {
-    text-align: center;
-    margin-left: 100px;
-    margin-right: 100px
-}
-
-.fun-community {
+.cause2 {
     background-color: rgba(47, 47, 47, 0.596);
     border-radius: 15px;
     width: 1000px;
@@ -393,206 +485,136 @@ body {
     margin-right: auto;
     padding-top: 30px;
     margin-bottom: 50px;
+    border: 3px solid rgba(129, 129, 129, 0.236);
     cursor: pointer;
-    transition: color 0.5s ease; /* время и тип перехода */
+    box-shadow: 0 0 70px rgba(145, 145, 145, 0.069);
+    transition: 0.4s;
 }
 
-.fun-community:hover {
-    background-color: rgba(47, 47, 47, 0.596);
-    border-radius: 15px;
-    width: 1000px;
-    height: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    cursor: pointer;
-    padding-top: 30px;
-    border:1px solid #60ff82db;
-    margin-bottom: 50px;
+.cause2:hover {
+    transform: scale(1.03);
+    border: 3px solid rgba(174, 255, 160, 0.236);
 }
 
-.fun-community p {
+@media (max-width: 1200px) {
+    .cause2 {
+        width: 800px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cause2 {
+        width: 600px;
+        height: 130px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cause2 {
+        width: 300px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .cause2 p{
+        text-align: center;
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cause2 p{
+        text-align: center;
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cause2 p{
+        text-align: center;
+        font-size: 15px;
+    }
+}
+
+.cause2 p {
     text-align: center;
     margin-left: 100px;
     margin-right: 100px
 }
-
-/* .exp_div-1 {
-    background-color: rgba(47, 47, 47, 0.596);
-    border-radius: 15px;
-    width: 1000px;
-    height: 180px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 30px;
-    margin-bottom: 50px;
-    transition: color 0.5s ease;
-} */
-
-/* .exp_div-1:hover {
-    background-color: rgba(47, 47, 47, 0.596);
-    border-radius: 15px;
-    width: 1000px;
-    height: 180px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 30px;
-    cursor: pointer;
-    background: linear-gradient(rgba(108, 255, 98, 0.271), rgba(64, 177, 51, 0.254));
-    margin-bottom: 50px;
-}
-
-.exp_div-1 p {
-    text-align: center;
-    margin-left: 100px;
-    margin-right: 100px
-}
-
-.exp_div-0 {
-    background-color: rgba(47, 47, 47, 0.596);
-    border-radius: 15px;
-    width: 1000px;
-    height: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 30px;
-    margin-bottom: 50px;
-}
-
-.exp_div-0 p {
-    text-align: center;
-    margin-left: 100px;
-    margin-right: 100px
-} */
-
-/* .help {
-    font-family: "Golos text";
-    font-style: normal;
-    font-size: 20px;
-    font-weight: 200;
-    font-display: swap;
-    margin-left: 260px;
-    margin-top: 90px;
-    color: white;
-}
-
-.help1 {
-
-    font-family: "Golos text";
-    font-style: normal;
-    font-size: 20px;
-    font-weight: 200;
-    font-display: swap;
-    margin-left: 260px;
-    color: white;
-
-} */
 
 .our-prem {
     font-family: 'Golos text';
     font-style: normal;
-    font-size: 40px;
+    font-size: 45px;
     font-weight: 600;
     font-display: swap;
     margin-left: 260px;
-    margin-top: 300px;
-    color: white;
-}
-.our-servers {
-    font-family: 'Golos text';
-    font-style: normal;
-    font-size: 40px;
-    font-weight: 600;
-    font-display: swap;
-    margin-left: 260px;
-    margin-top: 300px;
+    margin-top: 170px;
+    margin-bottom: 60px;
     color: white;
 }
 
-.title_what1 {
+@media (max-width: 1200px) {
+    .our-prem {
+        font-size: 50px;
+        margin-left: 60px;
+        margin-top: 80px;
+    }
+}
 
+@media (max-width: 768px) {
+    .our-prem {
+        font-size: 40px;
+        margin-left: 40px;
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .our-prem {
+        font-size: 30px;
+        margin-left: 30px;
+    }
+}
+
+
+.title_what {
     font-family: 'Unbounded';
     font-style: normal;
-    font-size: 35px;
+    font-size: 33px;
     color: white;
-
 }
 
-.des_what1 {
-
-    font-family: 'Golos text';
-    font-style: normal;
-    font-size: 30px;
-    color: rgb(218, 218, 218);
-
-}
-
-.des_what3 {
-
+.des_what {
     font-family: 'Golos text';
     font-style: normal;
     font-size: 23px;
-    color: rgba(148, 255, 109, 0.813);
-
-}
-.des_what3:hover {
-
-    font-family: 'Golos text';
-    font-style: normal;
-    font-size: 23px;
-    color: rgba(148, 255, 109, 0.672);
-
-}
-
-.stop {
-
-    font-family: 'Golos text';
-    font-style: normal;
-    font-size: 23px;
-    color: rgba(255, 109, 109, 0.813);
-
-}
-
-.go {
-
-    font-family: 'Golos text';
-    font-style: normal;
-    font-size: 23px;
-    color: rgba(126, 255, 109, 0.813);
-}
-
-.go:hover {
-
-    font-family: 'Golos text';
-    font-style: normal;
-    font-size: 23px;
-    color: rgba(126, 255, 109, 0.548);
+    color: rgb(178, 178, 178);
 }
 
 .title_what2 {
-
     font-family: 'Unbounded';
     font-style: normal;
     font-size: 35px;
     color: white;
-
 }
 
 .des_what2 {
-
     font-family: 'Golos text';
     font-style: normal;
     font-size: 30px;
     color: rgb(218, 218, 218);
-
 }
 
 
-.title-heder {
+.title-header {
 
     font-family: 'Golos Text';
     font-style: normal;
     font-size: 28px;
-    font-weight: 300;
+    font-weight: 500;
     font-display: swap;
     margin-left: 260px;
     color: white;
@@ -603,7 +625,7 @@ body {
     font-family: 'Golos Text';
     font-style: normal;
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 400;
     font-display: swap;
     margin-left: 260px;
     color: rgba(255, 255, 255, 0.903);
@@ -613,11 +635,11 @@ body {
     font-family: 'Golos Text';
     font-style: normal;
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 400;
     font-display: swap;
     margin-left: 260px;
-    color: rgba(255, 255, 255, 0.525);
-    transition: color 0.5s ease;
+    color: rgba(255, 255, 255, 0.706);
+    transition: 0.5s;
 }
 
 .des-heder:hover {
@@ -675,85 +697,138 @@ p {
     color: rgb(198, 198, 198);
 }
 
-.des-download_modpack {
-    font-size: 23px;
-    font-family: "Golos text";
-    text-align: left;
-    font-weight: 430;
-    margin-top: 25px;
-    color: rgb(119, 119, 119);
-    transition: color 0.5s ease;
-}
-
-.des-download_modpack:hover {
-    font-size: 23px;
-    font-family: "Golos text";
-    text-align: left;
-    font-weight: 430;
-    margin-top: 25px;
-    color: rgb(146, 146, 146);
-}
-
 .des {
-    font-size: 23px;
+    font-size: 24px;
     font-family: "Golos text";
     text-align: left;
     font-weight: 430;
-    margin-top: -15px;
+    margin-top: 30px;
     margin-left: 260px;
-    color: rgb(198, 198, 198);
+    color: rgb(140, 140, 140);
 }
 
-.button-heder {
-    font-family: "Golos text";
-    font-size: 15px;
-    padding: 1em 3.3em;
-    cursor: pointer;
-    color: rgb(27, 27, 27);
-    font-weight: 500;
-    border: none;
-    margin-left: 1500px;
-    margin-top: -1100px;
-    border-radius: 18px;
-    background: #ffffff;
-    box-shadow: #14360e 1px 5px 5px 0px;
-    will-change: transform;
-    transition: all 0.3s;
-    border-bottom: 2px solid #ffffff;
+@media (max-width: 1200px) {
+    .des {
+        font-size: 18px;
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .des {
+        font-size: 15px;
+        margin-left: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .des {
+        font-size: 12px;
+        margin-left: 100px;
+    }
 }
 
 .button1 {
     font-family: "Golos text";
-    cursor: not-allowed;
-    margin-top: 25px;
+    margin-top: 30px;
     font-size: 16px;
     padding: 1em 3.3em;
     cursor: pointer;
     font-weight: 500;
-    border: none;
     margin-left: 260px;
     border-radius: 18px;
     background: #aaff64;
     will-change: transform;
     transition: all 0.3s;
+    display: flex;
+    align-items: center;
 }
 
-.button9 {
-    font-family: "Golos text";
-    font-weight: 500px;
-    transition: all 0.3s;
+@media (max-width: 1200px) {
+    .button1 {
+        margin-left: 200px;
+        margin-top: -30px;
+    }
 }
 
-.button-plus {
+@media (max-width: 768px) {
+    .button1 {
+        margin-left: 150px;
+        margin-top: -40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .button1 {
+        margin-left: 100px;
+        margin-top: -50px;
+    }
+}
+
+.button_tg {
     font-family: "Golos text";
-    font-weight: 500px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-left: 20px;
+    border-radius: 18px;
+    will-change: transform;
+    flex-direction: column;
     transition: all 0.3s;
+    display: flex;
+    align-items: center;
+}
+.button_tg img {
+    width: 23px; /* Ширина иконки */
+    height: 23px; /* Высота иконки */
+    margin-bottom: -4px; /* Отступ снизу для центрирования */
+
+}
+
+.button_ds {
+    font-family: "Golos text";
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-left: 20px;
+    border-radius: 18px;
+    will-change: transform;
+    flex-direction: column;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Добавлено для центрирования по вертикали */
+    text-align: center;
+}
+.button_ds img {
+    width: 25px; /* Ширина иконки */
+    height: 25px; /* Высота иконки */
+    margin-bottom: -5px; /* Отступ снизу для центрирования */
+}
+
+.button_vk {
+    font-family: "Golos text";
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-left: 20px;
+    border-radius: 18px;
+    will-change: transform;
+    flex-direction: column;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Добавлено для центрирования по вертикали */
+    text-align: center;
+}
+.button_vk img {
+    width: 25px; /* Ширина иконки */
+    height: 25px; /* Высота иконки */
+    margin-bottom: -5px; /* Отступ снизу для центрирования */
 }
 
 .button1:hover {
-
     transform: scale(0.9);
-
 }
 
 .button2 {
@@ -774,73 +849,5 @@ p {
 }
 
 .button2:hover {
-
     transform: scale(0.9);
-
-}
-
-.button3 {
-
-    font-family: "Golos text";
-    margin-top: -25px;
-    font-size: 16px;
-    padding: 1em 3.3em;
-    cursor: pointer;
-    color: rgb(27, 27, 27);
-    font-weight: 500;
-    border: none;
-    margin-left: 260px;
-    border-radius: 18px;
-    background: #ffffff;
-    box-shadow: #3a3a3a 1px 5px 5px 0px;
-    will-change: transform;
-    transition: all 0.3s;
-    border-bottom: 2px solid #ffffff;
-
-}
-
-.button4 {
-
-    font-family: "Golos text";
-    margin-top: 25px;
-    font-size: 16px;
-    padding: 1em 3.3em;
-    cursor: pointer;
-    color: rgb(27, 27, 27);
-    font-weight: 500;
-    border: none;
-    margin-left: 100px;
-    border-radius: 18px;
-    background: #ffffff;
-    box-shadow: #494949 1px 5px 5px 0px;
-    will-change: transform;
-    transition: all 0.3s;
-    border-bottom: 2px solid #ffffff;
-
-}
-
-.button5 {
-
-    font-family: "Golos text";
-    margin-top: -25px;
-    font-size: 16px;
-    padding: 1em 3.3em;
-    cursor: pointer;
-    color: rgb(27, 27, 27);
-    font-weight: 500;
-    border: none;
-    margin-left: 100px;
-    border-radius: 18px;
-    background: #aaff64;
-    box-shadow: #14360e 1px 5px 5px 0px;
-    will-change: transform;
-    transition: all 0.3s;
-    border-bottom: 2px solid #aaff64;
-
-}
-
-.one {
-
-    color: rgb(23, 23, 23);
-
 }
