@@ -67,6 +67,842 @@
 
             .button2{display: inline-block;cursor: pointer; font-size:18px;text-decoration:none;padding:10px 40px; color:#ffffff;background:#282828;border-radius:16px;border:2px solid #545454;}
             .button2:hover{display: inline-block;cursor: pointer; text-decoration:none; color:#ffffffd2;background:#282828;border-radius:16px;border:2px solid #6e6e6e;}
+
+            
+body {
+    background-color: rgb(23, 23, 23);
+    font-family: "Unbounded", sans-serif;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: rgba(0, 0, 0,
+    
+  }
+
+.img1 {
+    width: 38%;
+    height: auto;
+    filter: drop-shadow(0px 0px 50px rgba(162, 255, 112, 0.236));
+    vertical-align: middle;
+    position: absolute;
+    top: 20%;
+    right: 7%;
+}
+
+/* Ширина скроллбара */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Дорожка скроллбара */
+::-webkit-scrollbar-track {
+    background: #2e2e2e;
+    border-radius: 13px;
+}
+
+/* Ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+/* Ползунок при наведении
+::-webkit-scrollbar-thumb:hover {
+    background: #cdcdcd;
+} */
+::-webkit-scrollbar-thumb {
+    background: #929292;
+    border-radius: 7px;
+}
+
+.img2 {
+    width: 5%;
+    height: auto;
+    vertical-align: middle;
+    position: absolute;
+    top: 150%;
+    right: 48%;
+}
+
+.footer {
+    background-color: rgba(47, 47, 47, 0.26);
+    border-radius: 15px;
+    width: 100%;
+    height: 500px;
+    padding-top: 30px;
+    padding-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 1200px) {
+    .footer p{
+        margin-left: 100px;
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer p{
+        margin-left: 90px;
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer p{
+        margin-left: 50px;
+        font-size: 15px;
+    }
+}
+
+.logo-header {
+    width: 32px;
+    height: auto;
+}
+
+.logo-footer {
+    width: 32px;
+    height: auto;
+    position: absolute;
+    top: 1955px;
+    left: 492px;
+}
+
+.logo-title {
+    width: 32px;
+    height: auto;
+}
+
+.main-div {
+
+    border-radius: 30px;
+    width: 100%;
+    height: 600px;
+    padding-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: -20px;
+    margin-top: 100px;
+    background: linear-gradient(rgba(108, 255, 98, 0.095), rgba(64, 177, 51, 0.072));
+
+}
+
+.footer-title {
+    font-family: 'Golos Text';
+    font-style: normal;
+    font-size: 35px;
+    font-weight: 500;
+    font-display: swap;
+    margin-left: 60px;
+    margin-top: 0px;
+    margin-bottom: -0px;
+    color: white;
+}
+
+.footer-title-sm {
+    font-family: 'Golos Text';
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 400;
+    font-display: swap;
+    margin-left: 60px;
+    margin-top: 30px;
+    margin-bottom: -0px;
+    color: rgba(255, 255, 255, 0.321);
+}
+
+@media (max-width: 1200px) {
+    .footer-title-sm {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-title-sm {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-title-sm {
+        font-size: 8px;
+    }
+}
+
+.footer-title-mini {
+    font-family: 'Golos Text';
+    font-style: normal;
+    font-size: 19px;
+    font-weight: 400;
+    font-display: swap;
+    margin-left: 60px;
+    margin-top: 30px;
+    margin-bottom: -0px;
+    color: rgba(255, 255, 255, 0.542);
+}
+
+.footer-des {
+    font-family: 'Golos Text';
+    font-style: normal;
+    font-size: 22px;
+    font-weight: 400;
+    font-display: swap;
+    margin-left: 60px;
+    margin-top: 5px;
+    margin-bottom: -0px;
+    color: rgba(255, 255, 255, 0.923);
+}
+
+.title {
+    font-family: 'Unbounded';
+    font-style: normal;
+    font-size: 70px;
+    font-weight: 500;
+    font-display: swap;
+    margin-left: 260px;
+    margin-top: 100px;
+    margin-bottom: 0px;
+    color: white;
+}
+
+@media (max-width: 1200px) {
+    .title {
+        font-size: 50px;
+        margin-left: 200px;
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 40px;
+        margin-left: 150px;
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 30px;
+        margin-left: 100px;
+    }
+}
+
+.title_gr {
+    font-family: 'Unbounded';
+    font-style: normal;
+    font-size: 70px;
+    font-weight: 500;
+    font-display: swap;
+    margin-top: 1px;
+    color: white;
+    background: linear-gradient(120deg, #a7ff87, #43ff49e8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 1200px) {
+    .title_gr {
+        font-size: 50px;
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title_gr {
+        font-size: 40px;
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title_gr {
+        font-size: 30px;
+        margin-top: 40px;
+    }
+}
+
+.exp_gr {
+    font-family: 'Golos text';
+    font-style: normal;
+    font-size: 45px;
+    font-weight: 700;
+    font-display: swap;
+    margin-top: 1px;
+    color: white;
+    background: linear-gradient(120deg, #a7ff87, #43ff49e8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 1200px) {
+    .exp_gr {
+        font-size: 50px;
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .exp_gr {
+        font-size: 40px;
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .exp_gr {
+        font-size: 30px;
+    }
+}
+
+.what {
+    margin-bottom: 30px;
+}
+
+.header {
+    background-color: rgba(23, 23, 23, 0.855);
+    border-radius: 0px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    position: fixed;
+    top: 0;
+    border:2px solid #89898926;
+    z-index: 100;
+    width: 150%;
+    backdrop-filter: blur(30px)
+}
+
+.white-text-title {
+    color: white;
+}
+
+.white-text-title:hover {
+    color: white;
+}
+
+.cause3 {
+    background-color: rgba(47, 47, 47, 0.596);
+    border-radius: 15px;
+    width: 1000px;
+    height: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    margin-bottom: 50px;
+    border: 3px solid rgba(129, 129, 129, 0.236);
+    cursor: pointer;
+    box-shadow: 0 0 70px rgba(145, 145, 145, 0.069);
+    transition: 0.4s;
+}
+
+.cause3:hover {
+    transform: scale(1.03);
+    border: 3px solid rgba(174, 255, 160, 0.236);
+}
+
+.cause3 p {
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px
+}
+
+@media (max-width: 1200px) {
+    .cause3 {
+        width: 800px;
+        height: 130px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cause3 {
+        width: 600px;
+        height: 110px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cause3 {
+        width: 300px;
+        height: 240px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .cause3 p{
+        text-align: center;
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cause3 p{
+        text-align: center;
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cause3 p{
+        text-align: center;
+        font-size: 15px;
+    }
+}
+
+.cause1 {
+    background-color: rgba(47, 47, 47, 0.596);
+    border-radius: 15px;
+    width: 1000px;
+    border: 3px solid rgba(129, 129, 129, 0.236);
+    height: 130px;
+    margin-left: auto;
+    cursor: pointer;
+    box-shadow: 0 0 70px rgba(145, 145, 145, 0.069);
+    margin-right: auto;
+    padding-top: 30px;
+    margin-bottom: 50px;
+    transition: 0.4s;
+}
+
+@media (max-width: 1200px) {
+    .cause1 {
+        width: 800px;
+        height: 130px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cause1 {
+        width: 600px;
+        height: 110px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cause1 {
+        width: 300px;
+        height: 240px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .cause1 p{
+        text-align: center;
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cause1 p{
+        text-align: center;
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cause1 p{
+        text-align: center;
+        font-size: 15px;
+    }
+}
+
+.cause1:hover {
+    transform: scale(1.03);
+    border: 3px solid rgba(174, 255, 160, 0.236);
+}
+
+
+.cause1 p {
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px
+}
+
+.transparent {
+    color: rgba(23, 23, 23, 0);
+    font-size: 1px;
+}
+
+.go-div p {
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px
+}
+
+.cause2 {
+    background-color: rgba(47, 47, 47, 0.596);
+    border-radius: 15px;
+    width: 1000px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    margin-bottom: 50px;
+    border: 3px solid rgba(129, 129, 129, 0.236);
+    cursor: pointer;
+    box-shadow: 0 0 70px rgba(145, 145, 145, 0.069);
+    transition: 0.4s;
+}
+
+.cause2:hover {
+    transform: scale(1.03);
+    border: 3px solid rgba(174, 255, 160, 0.236);
+}
+
+@media (max-width: 1200px) {
+    .cause2 {
+        width: 800px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cause2 {
+        width: 600px;
+        height: 130px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cause2 {
+        width: 300px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .cause2 p{
+        text-align: center;
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cause2 p{
+        text-align: center;
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cause2 p{
+        text-align: center;
+        font-size: 15px;
+    }
+}
+
+.cause2 p {
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px
+}
+
+.our-prem {
+    font-family: 'Golos text';
+    font-style: normal;
+    font-size: 45px;
+    font-weight: 600;
+    font-display: swap;
+    margin-left: 260px;
+    margin-top: 170px;
+    margin-bottom: 60px;
+    color: white;
+}
+
+@media (max-width: 1200px) {
+    .our-prem {
+        font-size: 50px;
+        margin-left: 60px;
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .our-prem {
+        font-size: 40px;
+        margin-left: 40px;
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .our-prem {
+        font-size: 30px;
+        margin-left: 30px;
+    }
+}
+
+
+.title_what {
+    font-family: 'Unbounded';
+    font-style: normal;
+    font-size: 33px;
+    color: white;
+}
+
+.des_what {
+    font-family: 'Golos text';
+    font-style: normal;
+    font-size: 23px;
+    color: rgb(178, 178, 178);
+}
+
+.title_what2 {
+    font-family: 'Unbounded';
+    font-style: normal;
+    font-size: 35px;
+    color: white;
+}
+
+.des_what2 {
+    font-family: 'Golos text';
+    font-style: normal;
+    font-size: 30px;
+    color: rgb(218, 218, 218);
+}
+
+
+.title-header {
+
+    font-family: 'Golos Text';
+    font-style: normal;
+    font-size: 28px;
+    font-weight: 500;
+    font-display: swap;
+    margin-left: 260px;
+    color: white;
+
+}
+
+.on-des-heder {
+    font-family: 'Golos Text';
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 400;
+    font-display: swap;
+    margin-left: 260px;
+    color: rgba(255, 255, 255, 0.903);
+}
+
+.des-heder {
+    font-family: 'Golos Text';
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 400;
+    font-display: swap;
+    margin-left: 260px;
+    color: rgba(255, 255, 255, 0.706);
+    transition: 0.5s;
+}
+
+.des-heder:hover {
+    color: rgba(255, 255, 255, 0.903);
+}
+
+.title-footer {
+
+    font-family: 'Golos text';
+    font-style: normal;
+    font-size: 28px;
+    font-weight: 300;
+    font-display: swap;
+    margin-left: 260px;
+    margin-top: 200px;
+    color: white;
+
+}
+
+.des-footer {
+    font-size: 15px;
+    font-family: "Golos text";
+    text-align: left;
+    font-weight: 440;
+    margin-top: 15px;
+    margin-left: 260px;
+    color: rgb(154, 154, 154);
+}
+
+.social-footer {
+    font-size: 20px;
+    font-family: "Golos text";
+    text-align: left;
+    font-weight: 440;
+    margin-left: 260px;
+    color: rgb(154, 154, 154);
+}
+
+p {
+    font-size: 23px;
+    font-family: "Golos text";
+    text-align: left;
+    font-weight: 430;
+    margin-top: -15px;
+    margin-left: 260px;
+    color: rgb(198, 198, 198);
+}
+.dese {
+    font-size: 23px;
+    font-family: "Golos text";
+    text-align: left;
+    font-weight: 430;
+    margin-top: 25px;
+    margin-left: 260px;
+    color: rgb(198, 198, 198);
+}
+
+.des {
+    font-size: 24px;
+    font-family: "Golos text";
+    text-align: left;
+    font-weight: 430;
+    margin-top: 30px;
+    margin-left: 260px;
+    color: rgb(140, 140, 140);
+}
+
+@media (max-width: 1200px) {
+    .des {
+        font-size: 18px;
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .des {
+        font-size: 15px;
+        margin-left: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .des {
+        font-size: 12px;
+        margin-left: 100px;
+    }
+}
+
+.button1 {
+    font-family: "Golos text";
+    margin-top: 30px;
+    font-size: 16px;
+    padding: 1em 3.3em;
+    cursor: pointer;
+    font-weight: 500;
+    margin-left: 260px;
+    border-radius: 18px;
+    background: #aaff64;
+    will-change: transform;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 1200px) {
+    .button1 {
+        margin-left: 200px;
+        margin-top: -30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .button1 {
+        margin-left: 150px;
+        margin-top: -40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .button1 {
+        margin-left: 100px;
+        margin-top: -50px;
+    }
+}
+
+.button_tg {
+    font-family: "Golos text";
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-left: 20px;
+    border-radius: 18px;
+    will-change: transform;
+    flex-direction: column;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+}
+.button_tg img {
+    width: 23px; /* Ширина иконки */
+    height: 23px; /* Высота иконки */
+    margin-bottom: -4px; /* Отступ снизу для центрирования */
+
+}
+
+.button_ds {
+    font-family: "Golos text";
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-left: 20px;
+    border-radius: 18px;
+    will-change: transform;
+    flex-direction: column;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Добавлено для центрирования по вертикали */
+    text-align: center;
+}
+.button_ds img {
+    width: 25px; /* Ширина иконки */
+    height: 25px; /* Высота иконки */
+    margin-bottom: -5px; /* Отступ снизу для центрирования */
+}
+
+.button_vk {
+    font-family: "Golos text";
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-left: 20px;
+    border-radius: 18px;
+    will-change: transform;
+    flex-direction: column;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Добавлено для центрирования по вертикали */
+    text-align: center;
+}
+.button_vk img {
+    width: 25px; /* Ширина иконки */
+    height: 25px; /* Высота иконки */
+    margin-bottom: -5px; /* Отступ снизу для центрирования */
+}
+
+.button1:hover {
+    transform: scale(0.9);
+}
+
+.button2 {
+    font-family: "Golos text";
+    margin-top: 25px;
+    font-size: 13px;
+    padding: 1em 3.3em;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    border: none;
+    margin-left: 25px;
+    border-radius: 18px;
+    background: #242424;
+    will-change: transform;
+    transition: all 0.3s;
+    border: 1px solid #898989;
+}
+
+.button2:hover {
+    transform: scale(0.9);
+}
            </style>
 
     </head>
