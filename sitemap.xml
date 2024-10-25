@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<html>
+    <head>
+
+        <title>Приватный Minecraft сервер • VanillaSuper</title>
+        <link rel="icon" type="image/png" href="images/favicon-16x16.png">
+
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">  
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <style>
+
+            a {
+                color: rgba(255, 255, 255, 0.342);
+                text-decoration: none;
+                transition: color 0.5s ease; /* время и тип перехода */
+                cursor: pointer;
+               }
+               a:hover {
+                   color: rgba(255, 255, 255, 0.532);
+                   text-decoration: none;
+                   cursor: pointer;
+                  }
+
+            .image1 {
+                box-shadow: 0px 0px 0px rgba(111, 255, 98, 0.5);
+                filter: drop-shadow(0px 0px 80px #5cff5628)
+            }
+
+            ::selection {
+                background-color: #60ff82db;
+                color: #232323;
+            }
+                    body {
+            margin: 0;
+            padding: 0;
+        }
+
+            .button1{display: inline-block;font-size:18px; text-decoration:none; padding:10px 40px; color:#ffffff; background:#aaff6420;border-radius:16px;border: 2px solid #aaff6430;}
+            .button1:hover{background:#aaff6420; transform: scale(0.9); color:#ffffff;border: 2px solid #aaff6450; transition: all 0.4s ease;}
+
+            .button_tg{display: inline-block;font-size:18px; text-decoration:none; color:#ffffff; background:#64d6ff20;border-radius:16px;border: 2px solid #64c4ff30;}
+            .button_tg:hover{background:#64d8ff20; transform: scale(0.9); color:#ffffff;border: 2px solid #64c4ff50; transition: all 0.4s ease;}
+
+            .button_ds{display: inline-block;font-size:18px; text-decoration:none; padding:9px 35px; color:#ffffff; background:#6490ff20;border-radius:16px;border: 2px solid #6495ff30;}
+            .button_ds:hover{background:#649aff20; transform: scale(0.9); color:#ffffff;border: 2px solid #6495ff50; transition: all 0.4s ease;}
+
+            .button_vk{display: inline-block;font-size:18px; text-decoration:none; padding:9px 35px; color:#ffffff; background:#649fff20;border-radius:16px;border: 2px solid #649aff30;}
+            .button_vk:hover{background:#649aff20; transform: scale(0.9); color:#ffffff;border: 2px solid #64b9ff50; transition: all 0.4s ease;}
+
+            .button9{display: inline-block; cursor: pointer;font-size:18px;font-weight: 400px; text-decoration:none; padding:11px 44px; color:#232323; background:#ffffff;border-radius:12px;border:0px solid #232323;}
+            .button9:hover{background:#ddddddeb;color:#232323;font-weight: 400px; border:0px solid #232323;transition: all 0.4s ease;}
+
+            .button-plus{display: inline-block; cursor: pointer;font-size:18px;font-weight: 400px; text-decoration:none; padding:11px 44px; color:#232323; background: #aaff64e8;border-radius:12px;border:0px solid #23232300;}
+            .button-plus:hover{background: #aaff64b8; color:#232323;font-weight: 600px; border:0px solid #232323;transition: all 0.4s ease;}
+
+            .button2{display: inline-block;cursor: pointer; font-size:18px;text-decoration:none; color:#ffffff;background:#282828;border-radius:16px;border:2px solid #545454;}
+            .button2:hover{display: inline-block;cursor: pointer; text-decoration:none; color:#ffffffd2;background:#282828;border-radius:16px;border:2px solid #6e6e6e;}
+           </style>
+
+    </head>
+    <body>
+        <header>
+
+        <div class="header">
+            <a href="index.html">
+                <img src="images/favicon-32x32.png" alt="VanillaSuper" class="logo-header" style="position: absolute; left: 268px; top: 20px;">
+            </a>
+            <h1 class="title-header" style="position: absolute; left: 52px; top: 0px;"><a class="white-text-title" href="index.html">VanillaSuper</a></h1>.
+            
+            <h1 class="on-des-heder" style="position: absolute; left: 300px; top: 10px;">Главная</h1>.
+            <h1 class="des-heder"  style="position: absolute; left: 430px; top: 10px;"><a href="https://ladalegends.gitbook.io/vanillasuper">Википедия</a></h1>. 
+            <h1 class="des-heder" style="position: absolute; left: 590px; top: 10px;"><a href="https://t.me/ladalegends">Поддержка</a></h1>.
+
+        </div>
+
+        </header>
+            <div class="main-div">
+                <div>
+                    <h1 class="title">Приватный <a class="title_gr">Minecraft &shy;сервер!</a></h1>
+                    <p class="des">Мы - дружная команда, старающаяся делать сервер лучше для вас каждый день, <br>мы не идеальны, но стремимся к этому. Перед началом нужно заполнить анкету.</p>
+                    <a href="https://t.me/vanillasuper_ru" class="button1">Получить доступ на сервер</a>
+                    <a class="button2" id="copyButton" onclick="showAlert()">Скопировать IP</a> <span id="copyResult"></span>
+                    <a href="https://t.me/vanillasuper_ru" target="_blank" class="button_tg"><img src="images/telegram.png"></a>
+                    <p class="transparent" id="textToCopy">vanillasuper.xyz</p>
+                </div>
+            </div>
+    
+            <script src="wow.min.js"></script>
+            <script>
+                new WOW().init();
+
+                const answer = document.getElementById("copyResult");
+                const copy   = document.getElementById("copyButton");
+                const selection = window.getSelection();
+                const range = document.createRange();
+                const textToCopy = document.getElementById("textToCopy")
+                
+                copy.addEventListener('click', function(e) {
+                    range.selectNodeContents(textToCopy);
+                    selection.removeAllRanges();
+                    selection.addRange(range);
+                    const successful = document.execCommand('copy');
+                    window.getSelection().removeAllRanges()
+                });
+                        
+                function showAlert() {
+                    alert("Успешно скопировано!");
+                }
+                
+            </script>
+
+    <div class="what">
+        <p class="our-prem wow animate__animated animate__fadeInDown">Почему <a class="exp_gr">VanillaSuper</a>?</p>
+    </div>
+
+    <div class="cause1 wow animate__animated animate__fadeIn ">
+        <p class="title_what" >Дружелюбное комьюнити</p>
+        <p class="des_what">На сервере VanillaSuper вы найдете теплое и гостеприимное сообщество, где каждый игрок чувствует себя как дома.</p>
+    </div>
+
+    <div class="cause2 wow animate__animated animate__fadeIn">
+        <p class="title_what">Место где царит веселье!</p>
+        <p class="des_what">Ищи веселье? Найдешь его на VanillaSuper! Наш сервер предлагает уникальный опыт выживания, где каждый день приносит новые открытия и радость.</p>
+    </div>
+
+    <div class="cause3 wow animate__animated animate__fadeIn">
+        <p class="title_what">Множество механик</p>
+        <p class="des_what">Наш сервер предлагает множество механик, которые позволят тебе полностью раскрыть свой потенциал.</p>
+    </div>
+
+
+    </body>
+
+<footer>
+
+    <div class="footer">
+        <!-- <img src="images/favicon-32x32.png" alt="VanillaSuper" class="logo-footer"> -->
+        <h1 class="footer-title">VanillaSuper</h1>
+        <p class="footer-title-mini">Поддержка</p>
+        <p class="footer-des">vanillasuper.off@gmail.com</p>
+        <p class="footer-title-mini">Поддержка (Telegram)</p>
+        <p class="footer-des">t.me/ladalegends</p>
+        <p class="footer-title-sm">Not an official Minecraft product. We are in no way &shy;affiliated with or endorsed by Mojang Synergies AB, &shy;Microsoft Corporation or other rightsholders.</p>        
+    </div>
+
+</footer>
+
+</html>
