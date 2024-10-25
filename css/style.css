@@ -105,6 +105,24 @@ body {
     height: auto;
 }
 
+@media (max-width: 1200px) {
+    .logo-header{
+        margin-left: -170px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-header{
+        margin-left: -230px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-header{
+        margin-left: -250px;
+    }
+}
+
 .logo-footer {
     width: 32px;
     height: auto;
@@ -140,7 +158,7 @@ body {
 
 @media (max-width: 768px) {
     .main-div {
-        height: 350px;
+        height: 500px;
     }
 }
 
@@ -373,6 +391,12 @@ body {
     margin-bottom: 30px;
 }
 
+@media (max-width: 480px) {
+    .what p{
+        margin-top: 70px;
+    }
+}
+
 .header {
     background-color: rgba(23, 23, 23, 0.855);
     border-radius: 0px;
@@ -385,6 +409,24 @@ body {
     z-index: 100;
     width: 150%;
     backdrop-filter: blur(30px)
+}
+
+@media (max-width: 1200px) {
+    .header h1 {
+        margin-left: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        margin-left: 10px;
+    }
 }
 
 .white-text-title {
@@ -783,7 +825,7 @@ p {
 
 @media (max-width: 768px) {
     .des {
-        font-size: 15px;
+        font-size: 18px;
         margin-left: 60px;
     }
 }
@@ -825,6 +867,12 @@ p {
     }
 }
 
+@media (max-width: 666px) {
+    .button1 {
+        margin-top: 15px;
+    }
+}
+
 @media (max-width: 480px) {
     .button1 {
         margin-left: 40px;
@@ -844,12 +892,52 @@ p {
     transition: all 0.3s;
     display: flex;
     align-items: center;
+    padding: 9px 35px;
 }
 .button_tg img {
     width: 23px; /* Ширина иконки */
     height: 23px; /* Высота иконки */
     margin-bottom: -4px; /* Отступ снизу для центрирования */
 
+}
+
+@media (max-width: 874px) {
+    .button_tg {
+        margin-left: 120px;
+        margin-top: 15px;
+        padding: 9px 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .button_tg {
+        margin-left: 60px;
+        margin-top: 15px;
+        padding: 9px 70px;
+    }
+}
+
+@media (max-width: 680px) {
+    .button_tg {
+        margin-left: 60px;
+        margin-top: 15px;
+        padding: 9px 70px;
+    }
+}
+
+@media (max-width: 666px) {
+    .button_tg {
+        margin-left: 10px;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .button_tg {
+        margin-left: 40px;
+        margin-top: 25px;
+        padding: 9px 150px;
+    }
 }
 
 .button_ds {
@@ -902,7 +990,7 @@ p {
     font-family: "Golos text";
     margin-top: 25px;
     font-size: 13px;
-    padding: 1em 3.3em;
+    padding: 10px 40px;
     cursor: pointer;
     color: rgb(255, 255, 255);
     font-weight: 500;
@@ -913,6 +1001,21 @@ p {
     will-change: transform;
     transition: all 0.3s;
     border: 1px solid #898989;
+}
+
+@media (max-width: 480px) {
+    .button2 {
+        margin-left: 40px;
+        margin-top: 25px;
+        padding: 10px 93px;
+    }
+}
+
+@media (max-width: 666px) {
+    .button2 {
+        margin-left: 60px;
+        margin-top: 15px;
+    }
 }
 
 .button2:hover {
