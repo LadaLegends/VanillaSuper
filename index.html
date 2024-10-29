@@ -2,6 +2,7 @@
 <html lang="ru">
 
 <html>
+    
     <head>
 
         <title>Приватный Minecraft сервер • VanillaSuper</title>
@@ -16,10 +17,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">  
-
-        <meta name="google-site-verification" content="PMQEVrVd0KY408W1tmsfNfsRJzC5cnm6Yxsd5YWggDA" />
-        <meta name="description" content="Наш Minecraft проект является одним из лучших среди остальных ванильных серверов. У нас нету привата, доната и прочего мусора. Мы находимся на версии Minecraft Java 1.20.1.">
-        <meta name="keywords" content="VanillaSuper, ванилласупер, майнкрафт сервер, ванильное выживание, 1.20.1, Minecraft">
 
         <link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -76,7 +73,6 @@
     </head>
     <body>
         <header>
-
         <div class="header">
             <a href="index.html">
                 <img src="images/favicon-32x32.png" alt="VanillaSuper" class="logo-header" style="position: absolute; left: 268px; top: 20px;">
@@ -85,11 +81,11 @@
             
             <h1 class="on-des-heder" style="position: absolute; left: 300px; top: 10px;">Главная</h1>.
             <h1 class="des-heder"  style="position: absolute; left: 430px; top: 10px;"><a href="https://ladalegends.gitbook.io/vanillasuper">Википедия</a></h1>. 
-            <h1 class="des-heder" style="position: absolute; left: 590px; top: 10px;"><a href="https://t.me/vssupports_bot">Поддержка</a></h1>.
+            <h1 class="des-heder" style="position: absolute; left: 590px; top: 10px;"><a href="https://t.me/ladalegends">Поддержка</a></h1>.
 
         </div>
-
         </header>
+
             <div class="main-div">
                 <div>
                     <h1 class="title">Приватный <a class="title_gr">Minecraft &shy;сервер!</a></h1>
@@ -97,7 +93,7 @@
                     <a href="https://forms.gle/hEu5zLi3V3ro5fVj7" class="button1">Получить доступ на сервер</a>
                     <a class="button2" id="copyButton" onclick="showAlert()">Скопировать IP</a> <span id="copyResult"></span>
                     <a href="https://t.me/vanillasuper_ru" target="_blank" class="button_tg"><img src="images/telegram.png"></a>
-                    <p class="transparent" id="textToCopy">45.129.186.174:25589</p>
+                    <p class="transparent" id="textToCopy">vanillasuper.xyz</p>
                 </div>
             </div>
     
@@ -122,11 +118,34 @@
                 function showAlert() {
                     alert("Успешно скопировано!");
                 }
-                
+
+                let slideIndex = 0;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    slideIndex += n;
+    showSlides(slideIndex);
+}
+
+function showSlides(n) {
+    let slides = document.querySelectorAll('.slide');
+    if (n >= slides.length) {
+        slideIndex = 0;
+    }
+    if (n < 0) {
+        slideIndex = slides.length - 1;
+    }
+    let offset = slideIndex * -100;
+    slides.forEach(slide => {
+        slide.style.transform = `translateX(${offset}%)`;
+    });
+}
+
+            
             </script>
 
     <div class="what">
-        <p class="our-prem wow animate__animated animate__fadeInDown">Почему <a class="exp_gr">VanillaSuper</a>?</p>
+        <p id="whatme" class="our-prem wow animate__animated animate__fadeInDown">Почему <a class="exp_gr">VanillaSuper</a>?</p>
     </div>
 
     <div class="cause1 wow animate__animated animate__fadeIn ">
@@ -143,7 +162,62 @@
         <p class="title_what">Множество механик</p>
         <p class="des_what">Наш сервер предлагает множество механик, которые позволят тебе полностью раскрыть свой потенциал.</p>
     </div>
+    
+    <div class="what">
+            <p id="faq" class="our-prem">FAQ - частые вопросы</p>
+    </div>
 
+        <details>
+            <summary>Сколько действует проходка?</summary>
+            <p>Проходка действует только на 1 сезон.</p>
+        </details>
+
+        <details>
+            <summary>Как мне получить проходку?</summary>
+            <p>Для этого необходимо заполнить анкету.</p>
+        </details>
+
+        <details>
+            <summary>Какая версия сервера?</summary>
+            <p>На данный момент Java Edition 1.20.1</p>
+        </details>
+
+        <details>
+            <summary>Лицензия нужна?</summary>
+            <p>Нет, лицензия не обязательна.</p>
+        </details>  
+        
+        <details>
+            <summary>Могу ли я играть с телефона, приставки (Bedrock)?</summary>
+            <p>Нет. В данный момент наш сервер не имеет такой возможности.</p>
+        </details>
+
+    <!-- <div class="what">
+        <p class="our-prem wow animate__animated animate__fadeInDown">Пару скриншотов с сервера</p>
+    </div>
+
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="images/screenshots (1).png" alt="Image 1">
+            </div>
+            <div class="slide">
+                <img src="images/screenshots (2).png" alt="Image 2">
+            </div>
+            <div class="slide">
+                <img src="images/screenshots (3).png" alt="Image 3">
+            </div>
+            <div class="slide">
+                <img src="images/screenshots (4).png" alt="Image 4">
+            </div>
+            <div class="slide">
+                <img src="images/main-page.png" alt="Image 4">
+            </div>
+
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div> -->
 
     </body>
 
@@ -151,7 +225,7 @@
 
     <div class="footer">
         <!-- <img src="images/favicon-32x32.png" alt="VanillaSuper" class="logo-footer"> -->
-        <h1 class="footer-title">VanillaSuper</h1>
+        <h1 class="footer-title">© 2024 VanillaSuper</h1>
         <p class="footer-title-mini">Поддержка</p>
         <p class="footer-des">vanillasuper.off@gmail.com</p>
         <p class="footer-title-mini">Поддержка (Telegram)</p>
