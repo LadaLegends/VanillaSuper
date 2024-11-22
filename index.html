@@ -1,8 +1,7 @@
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="ru">
 
 <html>
-    
     <head>
 
         <title>Приватный Minecraft сервер • VanillaSuper</title>
@@ -26,12 +25,10 @@
                 color: rgba(255, 255, 255, 0.342);
                 text-decoration: none;
                 transition: color 0.5s ease; /* время и тип перехода */
-                cursor: pointer;
                }
                a:hover {
                    color: rgba(255, 255, 255, 0.532);
                    text-decoration: none;
-                   cursor: pointer;
                   }
 
             .image1 {
@@ -77,11 +74,11 @@
             <a href="index.html">
                 <img src="images/favicon-32x32.png" alt="VanillaSuper" class="logo-header" style="position: absolute; left: 268px; top: 20px;">
             </a>
-            <h1 id="main" class="title-header" style="position: absolute; left: 52px; top: 0px;"><a class="white-text-title" href="index.html">VanillaSuper</a></h1>.
+            <h1 class="title-header" style="position: absolute; left: 52px; top: 0px;"><a class="white-text-title" href="index.html">VanillaSuper</a></h1>.
             
             <h1 class="on-des-heder" style="position: absolute; left: 300px; top: 10px;">Главная</h1>.
             <h1 class="des-heder"  style="position: absolute; left: 430px; top: 10px;"><a href="https://ladalegends.gitbook.io/vanillasuper">Википедия</a></h1>. 
-            <h1 class="des-heder" style="position: absolute; left: 590px; top: 10px;"><a href="https://t.me/vssupports_bot">Поддержка</a></h1>.
+            <h1 class="des-heder" style="position: absolute; left: 590px; top: 10px;"><a href="https://t.me/ladalegends">Поддержка</a></h1>.
 
         </div>
         </header>
@@ -89,6 +86,7 @@
             <div class="main-div">
                 <div>
                     <h1 class="title">Приватный <a class="title_gr">Minecraft &shy;сервер!</a></h1>
+                    <div class="des" id="serverStatus">Загрузка...</div>
                     <p class="des">Мы - дружная команда, старающаяся делать сервер лучше для вас каждый день, <br>мы не идеальны, но стремимся к этому. Перед началом нужно заполнить анкету.</p>
                     <a href="https://forms.gle/hEu5zLi3V3ro5fVj7" class="button1">Получить доступ на сервер</a>
                     <a class="button2" id="copyButton" onclick="showAlert()">Скопировать IP</a> <span id="copyResult"></span>
@@ -141,6 +139,27 @@ function showSlides(n) {
     });
 }
 
+async function fetchServerStatus() {
+    try {
+        const response = await fetch(`https://api.mcsrvstat.us/2/45.129.186.174:25589`);
+        const data = await response.json();
+        
+        const serverStatus = document.getElementById("serverStatus");
+        
+        if (data.online) {
+            serverStatus.innerHTML = `Игроков онлайн: ${data.players.online}/${data.players.max}`;
+        } else {
+            serverStatus.innerHTML = "Сервер оффлайн";
+        }
+    } catch (error) {
+        document.getElementById("serverStatus").innerHTML = "Не удалось получить данные о сервере.";
+        console.error("Error fetching server status:", error);
+    }
+}
+
+fetchServerStatus();
+setInterval(fetchServerStatus, 6000); // Обновление данных каждые 60 секунд
+
             
             </script>
 
@@ -150,21 +169,30 @@ function showSlides(n) {
 
     <div class="cause1 wow animate__animated animate__fadeIn ">
         <p class="title_what" >Дружелюбное комьюнити</p>
-        <p class="des_what">На сервере VanillaSuper вы найдете теплое и гостеприимное сообщество, где каждый игрок чувствует себя как дома.</p>
+        <p class="des_what">На сервере VanillaSuper вы найдете теплое и гостеприимное <br>сообщество, где каждый игрок чувствует себя как дома.</p>
+            <div class="icon-heart">
+                <img class="img-icon" src="images/heart.png">
+            </div>
     </div>
 
     <div class="cause2 wow animate__animated animate__fadeIn">
         <p class="title_what">Место где царит веселье!</p>
-        <p class="des_what">Ищи веселье? Найдешь его на VanillaSuper! Наш сервер предлагает уникальный опыт выживания, где каждый день приносит новые открытия и радость.</p>
+        <p class="des_what">Ищешь веселье? Найдешь его на VanillaSuper! Наш сервер <br>предлагает уникальный опыт выживания, где каждый день <br> приносит новые открытия и радость.</p>
+            <div class="icon-bolt">
+                <img class="img-icon" src="images/bolt.png">
+            </div>
     </div>
 
     <div class="cause3 wow animate__animated animate__fadeIn">
         <p class="title_what">Множество механик</p>
-        <p class="des_what">Наш сервер предлагает множество механик, которые позволят тебе полностью раскрыть свой потенциал.</p>
+        <p class="des_what">Наш сервер предлагает множество механик, <br>которые позволят тебе полностью раскрыть свой потенциал.</p>
+            <div class="icon-settings">
+                <img class="img-icon" src="images/settings.png">
+            </div>
     </div>
     
     <div class="what">
-            <p id="faq" class="our-prem">FAQ - частые вопросы</p>
+            <p id="faq" class="our-prem">FAQ - Ответы на вопросы</p>
     </div>
 
         <details>
@@ -179,7 +207,7 @@ function showSlides(n) {
 
         <details>
             <summary>Какая версия сервера?</summary>
-            <p>На данный момент Java Edition 1.20.1</p>
+            <p>На данный момент Java Edition 1.20.6</p>
         </details>
 
         <details>
