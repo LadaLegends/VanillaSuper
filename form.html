@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<html>
+    <head>
+        
+        <title>Заполнить анкету • VanillaSuper</title>
+        <link rel="icon" type="image/png" href="images/favicon-16x16.png">
+        <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdJ-nkqAAAAADKViRyhRh3yeB5CP4fANSpCQwxu"></script>
+
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">  
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <style>
+
+            a {
+                color: rgba(255, 255, 255, 0.342);
+                text-decoration: none;
+                transition: color 0.5s ease; /* время и тип перехода */
+               }
+               a:hover {
+                   color: rgba(255, 255, 255, 0.532);
+                   text-decoration: none;
+                  }
+
+            .image1 {
+                box-shadow: 0px 0px 0px rgba(111, 255, 98, 0.5);
+                filter: drop-shadow(0px 0px 80px #5cff5628)
+            }
+
+            ::selection {
+                background-color: #60ff82db;
+                color: #232323;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            .submit{display: inline-block;font-size:18px; text-decoration:none; padding:10px 40px; color:#ffffff; background:#aaff6420;border-radius:16px;border: 2px solid #aaff6430;}
+            .submit:hover{background:#aaff6420; transform: scale(0.9); color:#ffffff;border: 2px solid #aaff6450; transition: all 0.4s ease;}
+
+            .button_tg{display: inline-block;font-size:18px; text-decoration:none; color:#ffffff; background:#64d6ff20;border-radius:16px;border: 2px solid #64c4ff30;}
+            .button_tg:hover{background:#64d8ff20; transform: scale(0.9); color:#ffffff;border: 2px solid #64c4ff50; transition: all 0.4s ease;}
+
+            .button9{display: inline-block; cursor: pointer;font-size:18px;font-weight: 400px; text-decoration:none; padding:11px 44px; color:#232323; background:#ffffff;border-radius:12px;border:0px solid #232323;}
+            .button9:hover{background:#ddddddeb;color:#232323;font-weight: 400px; border:0px solid #232323;transition: all 0.4s ease;}
+
+
+            .button2{display: inline-block;cursor: pointer; font-size:18px;text-decoration:none; color:#ffffff;background:#282828;border-radius:16px;border:2px solid #545454;}
+            .button2:hover{display: inline-block;cursor: pointer; text-decoration:none; color:#ffffffd2;background:#282828;border-radius:16px;border:2px solid #6e6e6e;}
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <header>
+            <div class="header">
+
+                <a href="index.html">
+                    <img src="images/favicon-32x32.png" alt="VanillaSuper" class="logo-header" style="position: absolute; left: 268px; top: 20px;">
+                </a>
+                <h1 class="title-header" style="position: absolute; left: 52px; top: 0px;"><a class="white-text-title" href="index.html">VanillaSuper</a></h1>.
+                
+                <h1 class="des-heder" style="position: absolute; left: 300px; top: 10px;"><a href="index.html">Главная</a></h1>.
+                <h1 class="des-heder"  style="position: absolute; left: 430px; top: 10px;"><a href="https://ladalegends.gitbook.io/vanillasuper">Википедия</a></h1>. 
+                <h1 class="des-heder" style="position: absolute; left: 590px; top: 10px;"><a href="https://t.me/ladalegends">Поддержка</a></h1>.
+    
+            </div>
+        </header>
+    <div>
+        <div class="lol">
+            <h1 class="title_form">Анкета на сервер VanillaSuper</h1>
+            <p class="des_form">VanillaSuper - ванильный Minecraft сервер. <br>Чтобы вашу анкету приняли, вам необходимо быть<br> подписаным на наш <a href="https://t.me/vanillasuper_ru">Telegram канал</a></p>
+        </div>
+
+        <form id="contact-form">
+
+            <div class="form">
+                <label for="name">Ваш адрес электронной почты *</label><br>
+                <p class="p-form">Ваша действующая электронная почта</p>
+                <input type="email" id="email" name="email" maxlength="30" placeholder="Мой ответ" required>
+            </div>
+
+            <div class="form">
+                <label for="name">Откуда вы узнали о нас? *</label><br>
+                <p class="p-form">Небольшой ответ</p>
+                <input type="text" id="where" spellcheck="true" name="where" maxlength="100" placeholder="Мой ответ" required>
+            </div>
+
+            <div class="form">
+                <label for="name">Сколько вам лет? *</label><br>
+                <p class="p-form">Ваш реальный возраст</p>
+                <input type="number" id="age" name="age" min="12" title="Минимум 12 лет" placeholder="Мой ответ" required>
+            </div>
+
+            <div class="form">
+                <label for="name">Ваш @username в Telegram *</label><br>
+                <p class="p-form">Ваш текущий тег в Telegram. Важно</p>
+                <input type="text" id="username" name="username" maxlength="20" placeholder="Мой ответ" required>
+            </div>
+
+            <div class="form">
+                <label for="name">Ваш игровой скин</label><br>
+                <p class="p-form">Укажите ссылку на картинку с вашим скином. <em>(Для пропуска)</em></p>
+                <input type="text" id="skin" name="skin" placeholder="Мой ответ">
+            </div>
+
+            <div class="form">
+                <label for="name">Ваш игровой никнейм *</label><br>
+                <p class="p-form">Никнейм который вы используете для Minecraft</p>
+                <input type="text" id="nicname" name="nicname" pattern=".{5,}" placeholder="Мой ответ" required>
+            </div>
+
+            <div class="form">
+                <label for="name">О себе *</label><br>
+                <p class="p-form">Подробная информация о себе</p>
+                <input type="text" id="about" spellcheck="true" name="about" maxlength="500" placeholder="Мой ответ" required>
+            </div>
+
+            <div class="form">
+                <label>Ваше устройство *</label>
+                <p class="p-form">Устройство с которого вы будете играть</p>
+                <input class="device" type="radio" id="device" name="device" value="phone"> Мобильное устройство <em>(PojavLauncher и др.)</em></label><br>
+                <input class="device2" type="radio" id="device" name="device" value="pc"> Персональный компьютер <em>(Java)</em></label>
+            </div>
+
+            <button id="login-btn" onclick="removeButtonAfterDelay(this)" class="submit" type="submit">Отправить</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+
+      (function() {
+        emailjs.init("uPcYZmjhUURKlsCB5");  // Замените на ваш User ID из EmailJS
+      })();
+    
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const serviceID = 'service_v5ruf5n';  // Замените на ваш Service ID из EmailJS
+        const templateID = 'template_c3mswjd';  // Замените на ваш Template ID из EmailJS
+
+        emailjs.sendForm(serviceID, templateID, this)
+          .then(() => {
+            alert('Анкета отправлено!');
+          }, (err) => {
+            alert(JSON.stringify(err));
+          });
+      });
+
+        function removeButtonAfterDelay(button) { 
+            setTimeout(function() { 
+                button.parentNode.removeChild(button); 
+            }, 5000);
+        }
+
+    </script>    
+
+    </body>
+
+    <footer>
+
+        <div class="footer">
+            <!-- <img src="images/favicon-32x32.png" alt="VanillaSuper" class="logo-footer"> -->
+            <h1 class="footer-title">&copy; 2024 VanillaSuper</h1>
+            <p class="footer-title-mini">Поддержка</p>
+            <p class="footer-des">vanillasuper.off@gmail.com</p>
+            <p class="footer-title-mini">Поддержка (Telegram)</p>
+            <p class="footer-des">t.me/ladalegends</p>
+            <p class="footer-title-sm">Not an official Minecraft product. We are in no way &shy;affiliated with or endorsed by Mojang Synergies AB, &shy;Microsoft Corporation or other rightsholders.</p>        
+        </div>
+    
+    </footer>
+
+</html>
