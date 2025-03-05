@@ -91,7 +91,7 @@
                     <h1 class="title">Ванильный <br><a class="title_gr">Minecraft &shy;сервер</a></h1>
                     <p class="mikro-des">Это VanillaSuper.</p>
                     <p class="des">Пространство с идеальными условиями для раскрытия <br>собственного творческого потенциала в среде <br>ванильного выживания</p>
-                    <a href="form.html" class="button1">Начать играть</a>
+                    <!-- <a class="button1">Начать играть</a> -->
                     <a class="button2" id="copyButton">Скопировать IP</a> <span id="copyResult"></span>
 
                     <!-- <a href="https://t.me/vanillasuper_ru" target="_blank" class="button_tg"><img src="images/telegram.png"></a> -->
@@ -102,104 +102,6 @@
                     </div>
                 </div>
             </div>
-    
-            <script src="wow.min.js"></script>
-            <script>
-
-
-                new WOW().init();
-
-                const answer = document.getElementById("copyResult");
-                const copy   = document.getElementById("copyButton");
-                const selection = window.getSelection();
-                const range = document.createRange();
-                const textToCopy = document.getElementById("textToCopy")
-                
-                copy.addEventListener('click', function(e) {
-                    range.selectNodeContents(textToCopy);
-                    selection.removeAllRanges();
-                    selection.addRange(range);
-                    const successful = document.execCommand('copy');
-                    window.getSelection().removeAllRanges()
-                });
-                        
-                function showAlert() {
-                    alert("Успешно скопировано!");
-                }
-
-                // window.addEventListener('scroll', function() {
-                //     const elementsToBlur = document.querySelectorAll('.blur-on-scroll');
-                //     elementsToBlur.forEach(function(element) {
-                //         if (window.scrollY > 100) {
-                //             element.classList.add('blur');
-                //         } else {
-                //             element.classList.remove('blur');
-                //         }
-                //     });
-                // });
-
-                // window.addEventListener('scroll', function() {
-                //     const header = document.querySelector('.header');
-                    
-                //     if (window.scrollY > 1) {
-                //         header.classList.add('scrolled');
-                //     } else {
-                //         header.classList.remove('scrolled');
-                //     }
-                // });
-                
-                    document.getElementById('copyButton').addEventListener('click', 
-                    function() {
-
-                    var notification = document.getElementById('notification');
-                    notification.classList.add('show');
-
-                    setTimeout(function() {
-                        notification.classList.remove('show');
-                    }, 3000);
-                    });
-
-                    const serverIP = "hs.bitrixnodes.pro:25589"; // Здесь нужно указать IP адрес твоего сервера
-
-                    // Получение данных о игроках
-                    async function getPlayers() {
-                        try {
-                            const response = await fetch(`https://api.mcsrvstat.us/2/${serverIP}`);
-                            const data = await response.json();
-                            const playersList = document.getElementById("playersList");
-                            const totalCount = document.getElementById("totalCount");
-
-                            playersList.innerHTML = ""; // Очистка текущего списка перед обновлением
-
-                            if (data.players && data.players.list) {
-                                data.players.list.forEach(player => {
-                                    const playerElement = document.createElement("div");
-                                    playerElement.classList.add("player");
-
-                                    const playerImg = document.createElement("img");
-                                    playerImg.src = `https://minotar.net/avatar/${player}`;
-
-                                    const playerName = document.createElement("p");
-                                    playerName.textContent = player;
-
-                                    playerElement.appendChild(playerImg);
-                                    playerElement.appendChild(playerName);
-                                    playersList.appendChild(playerElement);
-                                });
-
-                                totalCount.textContent = `Всего игроков онлайн: ${data.players.online}`;
-                            } else {
-                                playersList.textContent = "Нет игроков онлайн.";
-                                totalCount.textContent = "";
-                            }
-                        } catch (error) {
-                            console.error("Произошла ошибка при получении данных:", error);
-                            playersList.textContent = "Произошла ошибка при получении данных.";
-                            totalCount.textContent = "";
-                        }
-                    }
-
-            </script>
 
     <div class="what">
         <p id="whatme" class="our-prem wow animate__animated animate__fadeInDown">Почему <a class="title_gr">VanillaSuper</a>?</p>
@@ -234,18 +136,8 @@
     </div>
 
         <details>
-            <summary>Сколько действует проходка?</summary>
-            <p>Проходка действует только на 1 сезон.</p>
-        </details>
-
-        <details>
-            <summary>Как мне получить проходку?</summary>
-            <p>Для этого необходимо заполнить анкету.</p>
-        </details>
-
-        <details>
             <summary>Какая версия сервера?</summary>
-            <p>На данный момент Java Edition 1.20.6</p>
+            <p>На данный момент Java Edition 1.21.4</p>
         </details>
 
         <details>
