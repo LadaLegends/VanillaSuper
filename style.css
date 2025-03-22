@@ -70,6 +70,12 @@ body {
     transform-origin: top right;
   }
 
+  @media (max-width: 768px) {
+    .skewed {
+        display: none;
+    }
+}
+
 .center-container {
     display: flex;
     justify-content: center; 
