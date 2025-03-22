@@ -16,7 +16,7 @@ body {
     }
 }
 
-@media (max-width: 373px) {
+@media (max-width: 400px) {
     .des {
         font-size: 10px;
     }
