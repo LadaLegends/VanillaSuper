@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VanillaSuper</title>
+    <link rel="icon" type="image/png" href="fabicon-64x64.png">
+
+    <meta name="theme-color" content="#00b962">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+
+    <section>
+        <div class="skewed"></div>
+    </section>
+
+    <h1 class="title animate__animated animate__zoomIn" style="font-family: Unbounded; text-align: center; margin-top: 250px; font-size: 3em;">
+        VanillaSuper — <br>очевидно, крутой сервер.
+    </h1>
+    <p class="des animate__animated animate__fadeIn" style="font-family: Golos Text; text-align: center; margin-top: 20px">
+        Ванильность — наш приоритет. Версия 1.21.4, лицензия не обязательна.
+    </p>
+
+    <div class="center-container">
+        <button id="copy_ip" onclick="copyText()">Скопировать IP</button>
+        <button id="open_popup">Подробнее</button>
+        <!-- <button id="our_wiki">Наша Вики</button> -->
+    </div>
+
+    <!-- Popup окно -->
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <span style="margin-left: 380px;" id="close_popup" class="popup-close">&times;</span>
+            <h2>Подробнее:</h2>
+            <p>Мы — приватный ванильный Minecraft-сервер с небольшим, но сплочённым сообществом игроков.</p>
+            <p>Лицензия не обязательна.</p>
+            <button id="our_telegram">Наш Telegram</button>
+            <button id="our_wiki">Наша Вики</button>
+        </div>
+    </div>
+
+    <script>
+        function copyText(){
+            alert("Не удалось скопировать IP.");
+        }
+
+        document.getElementById("our_telegram").onclick = function() {
+            window.open("https://t.me/vanillasuper_ru", "_blank");
+        };
+
+        document.getElementById("our_wiki").onclick = function() {
+            window.open("https://ladalegends.gitbook.io/vanillasuper", "_blank");
+        };
+
+        const popup = document.getElementById("popup");
+        const openPopup = document.getElementById("open_popup");
+        const closePopup = document.getElementById("close_popup");
+        const closeBtn = document.querySelector(".close-btn");
+
+        openPopup.addEventListener("click", () => {
+            popup.classList.remove("hidden");
+        });
+
+        closePopup.addEventListener("click", () => {
+            popup.classList.add("hidden");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            popup.classList.add("hidden");
+        });
+
+        popup.addEventListener("click", (e) => {
+            if (e.target === popup) {
+                popup.classList.add("hidden");
+            }
+        });
+    </script>
+
+</body>
+</html>

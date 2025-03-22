@@ -1,0 +1,171 @@
+/* Сайт для сервера VanillaSuper | By @LadaLegends */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+#copy_ip {
+    color: white;
+    z-index: 10;
+    margin-top: 40px;
+    margin-right: 10px;
+    font-size: 18px; 
+    text-decoration: none; 
+    padding: 14px 34px; 
+    background: #00af5c; 
+    border-radius: 12px; 
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+#our_telegram, #our_wiki, #open_popup {
+    margin-top: 40px;
+    z-index: 10;
+    margin-left: 10px;
+    font-size: 18px; 
+    text-decoration: none; 
+    padding: 14px 34px; 
+    color: black;
+    background: white; 
+    border-radius: 12px; 
+    border: 2px solid #e2e2e2;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+#copy_ip:hover {
+    background: #00b962;
+    /* transform: scale(1.05); */
+}
+
+#our_telegram:hover {
+    /* transform: scale(1.05); */
+    border: 2px solid #00b962;
+}
+
+#our_wiki:hover {
+    /* transform: scale(1.05); */
+    border: 2px solid #00b962;
+}
+
+#open_popup:hover {
+    border: 2px solid #00b962;
+}
+
+.skewed {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f2f2f2;
+    transform: skewY(12deg);
+    transform-origin: top right;
+  }
+
+.center-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .center-container {
+        margin-top: 50px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #copy_ip,
+    #our_telegram,
+    #our_wiki,
+    #open_popup {
+        margin: 0;
+        width: 90%;
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 480px) {
+    #copy_ip, 
+    #our_telegram, 
+    #our_wiki,
+    #open_popup {
+        font-size: 16px; 
+        padding: 10px 24px;
+    }
+
+    .center-container {
+        padding: 10px;
+    }
+}
+
+#close_popup:hover {
+    cursor: pointer;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(20px); /* Эффект размытия */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.popup.hidden {
+    display: none; /* Скрытие окна */
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    font-family: Golos Text;
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.popup-content h2 {
+    margin-top: 0;
+    font-family: Unbounded;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .popup-content {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .popup-content {
+        padding: 15px;
+    }
+}
