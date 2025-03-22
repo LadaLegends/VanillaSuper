@@ -6,6 +6,44 @@ body {
     background-color: #f8f9fa;
 }
 
+.des {
+   font-size: 17px; 
+}
+
+@media (max-width: 535px) {
+    .des {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 373px) {
+    .des {
+        font-size: 10px;
+    }
+}
+
+.title {
+    font-size: 3em;
+}
+
+@media (max-width: 604px) {
+    .title {
+        font-size: 2.2em;
+    }
+}
+
+@media (max-width: 445px) {
+    .title {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 380px) {
+    .title {
+        font-size: 1.7em;
+    }
+}
+
 #copy_ip {
     color: white;
     z-index: 10;
