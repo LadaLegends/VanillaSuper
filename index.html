@@ -49,8 +49,15 @@
     </div>
 
     <script>
-        function copyText(){
-            alert("Не удалось скопировать IP.");
+        function copyText() {
+            const textToCopy = "vanillasuper.ddns.net:25589";
+            navigator.clipboard.writeText(textToCopy)
+                .then(() => {
+                    alert("IP успешно скопирован!");
+                })
+                .catch(() => {
+                    alert("Не удалось скопировать IP.");
+                });
         }
 
         document.getElementById("our_telegram").onclick = function() {
