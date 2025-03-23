@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" href="fabicon-64x64.png">
 
     <meta name="theme-color" content="#00b962">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="style.css">
@@ -31,20 +32,20 @@
     </p>
 
     <div class="center-container">
-        <button id="copy_ip" onclick="copyText()">Скопировать IP</button>
-        <button id="open_popup">Подробнее</button>
+        <button style="user-select: none;" id="copy_ip" onclick="copyText()">Скопировать IP</button>
+        <button style="user-select: none;" id="open_popup">Подробнее</button>
         <!-- <button id="our_wiki">Наша Вики</button> -->
     </div>
 
-    <!-- Popup окно -->
     <div id="popup" class="popup hidden">
         <div class="popup-content">
             <span style="margin-left: 95%;" id="close_popup" class="popup-close">&times;</span>
             <h2>Подробнее:</h2>
-            <p>Мы — приватный ванильный Minecraft-сервер с небольшим, но сплочённым сообществом игроков.</p>
+            <p style="text-wrap: balance;" >Мы — приватный ванильный Minecraft-сервер с небольшим, но сплочённым сообществом игроков.</p>
             <p>В данный момент сервер недоступен. Подробнее <a href="https://t.me/vanillasuper_dev" style="color: #00b962">@vanillasuper_dev</a></p>
-            <button id="our_telegram">Наш Telegram</button>
-            <button id="our_wiki">Наша Вики</button>
+            <button style="user-select: none;" id="our_telegram">Наш Telegram</button>
+            <button style="user-select: none;" id="our_wiki">Наша Вики</button>
+            <button style="display: none;" class="close-btn">Закрыть</button>
         </div>
     </div>
 
