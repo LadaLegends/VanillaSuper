@@ -4,7 +4,44 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
-    overflow: hidden;
+}
+
+details {
+    background: #f6f6f6;
+    border: 2px solid #e9e9e9;
+    border-radius: 15px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+summary {
+    font-family: Golos Text;
+    font-weight: 500;
+    font-size: 25px;
+    cursor: pointer;
+    color: #2f2f2f;
+}
+
+details:last-child {
+    margin-bottom: 50px;
+}
+
+details p {
+    font-size: 20px;
+    font-family: Golos Text;
+    margin-top: 10px;
+    font-weight: 300;
+    margin-left: 5px;
+    color: #3b3b3b;
+    margin-bottom: 10px;
+}
+
+details:hover {
+    border: 2px solid #00af5c;
 }
 
 .des {
@@ -13,10 +50,32 @@ body {
 
 @media (max-width: 535px) {
     .des {
-        font-size: 13px;
+        font-size: 15px;
     }
 }
 
+
+.subtitle {
+    font-size: 2.2em;
+}
+
+@media (max-width: 604px) {
+    .subtitle {
+        font-size: 2.0em;
+    }
+}
+
+@media (max-width: 445px) {
+    .subtitle {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 380px) {
+    .subtitle {
+        font-size: 1.7em;
+    }
+}
 
 .title {
     font-size: 3em;
@@ -40,10 +99,20 @@ body {
     }
 }
 
+#server-status {
+    font-size: 16px;
+  }
+  .offline {
+    color: rgb(255, 85, 85);
+  }
+  .online {
+    color: rgb(146, 255, 146);
+  }
+
 #copy_ip {
     color: white;
     z-index: 10;
-    margin-top: 40px;
+    margin-top: 00px;
     margin-right: 10px;
     font-size: 18px; 
     text-decoration: none; 
@@ -73,7 +142,7 @@ body {
 }
 
 #open_popup {
-    margin-top: 40px;
+    margin-top: 0px;
     z-index: 10;
     margin-left: 10px;
     font-size: 18px; 
@@ -118,7 +187,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.03;
+    opacity: 0.05;
     transform: skewY(12deg);
     transform-origin: top right;
   }
