@@ -20,16 +20,15 @@
 
 <body>
 
-<!--     <section>
+    <!-- <section>
         <div class="skewed"></div>
     </section> -->
 
     <h1 class="title animate__animated animate__zoomIn" style="font-family: Unbounded; text-align: center; margin-top: 250px;">
         VanillaSuper — <br>очевидно, крутой сервер.
     </h1>
-    <p class="des animate__animated animate__fadeIn" style="font-family: Golos Text; text-align: center; margin-top: 20px">
-        Ванильность — наш приоритет. Версия 1.21.4, лицензия не обязательна.
-    </p>
+    <p class="des animate__animated animate__fadeIn" style="font-family: Golos Text; text-wrap: balance; text-align: center; margin-top: 20px">
+        Ванильность — наш приоритет. Версия 1.21.4, лицензия не обязательна.</p><br>
 
     <div class="center-container">
         <button style="user-select: none;" id="copy_ip" onclick="copyText()">Скопировать IP</button>
@@ -43,13 +42,68 @@
             <h2>Подробнее:</h2>
             <p style="text-wrap: balance;" >Мы — приватный ванильный Minecraft-сервер с небольшим, но сплочённым сообществом игроков.</p>
             <p>В данный момент сервер недоступен. Подробнее <a href="https://t.me/vanillasuper_dev" style="color: #00b962">@vanillasuper_dev</a></p>
+            <p class="des" style="font-family: Golos Text; text-wrap: balance; text-align: center; margin-top: -30px" id="server-status">
+                Получение статуса сервера...</p>
             <button style="user-select: none;" id="our_telegram">Наш Telegram</button>
             <button style="user-select: none;" id="our_wiki">Наша Вики</button>
-            <button style="display: none;" class="close-btn">Test</button>
+            <button style="display: none;" class="close-btn">Закрыть</button>
         </div>
     </div>
 
+    <h2 class="subtitle" style="font-family: Unbounded; text-wrap: balance; text-align: center; margin-top: 250px; color: rgb(52, 52, 52);">FAQ - ответы на вопросы</h2>
+    
+    <!-- <details>
+        <summary>Сколько действует проходка?</summary>
+        <p>Проходка действует только на 1 сезон.</p>
+    </details>
+
+    <details>
+        <summary>Как мне получить проходку?</summary>
+        <p>Для этого необходимо заполнить анкету.</p>
+    </details> -->
+
+    <details>
+        <summary>Какая версия сервера?</summary>
+        <p>На данный момент Java Edition 1.21.4</p>
+    </details>
+
+    <details>
+        <summary>Лицензия нужна?</summary>
+        <p>Нет, лицензия не обязательна.</p>
+    </details>  
+    
+    <details style="margin-bottom: 50px;" >
+        <summary>Могу ли я играть с телефона, приставки (Bedrock)?</summary>
+        <p>Нет. В данный момент наш сервер не имеет такой возможности.</p>
+    </details>
+
+    <noscript>У вас выклюен JavaScript. Сайт может работать некорректно</noscript>
+
     <script>
+
+      async function getServerStatus() {
+      const ip = "45.129.186.174";
+      const port = "25589";
+      const pElement = document.getElementById("server-status");
+
+      try {
+        const response = await fetch(`https://api.mcsrvstat.us/2/${ip}:${port}`);
+        const data = await response.json();
+
+        if (data.online) {
+          pElement.textContent = `Игроков онлайн: ${data.players.online} из ${data.players.max}`;
+        } else {
+          pElement.textContent = "Сервер выключен.";
+        }
+      } catch (error) {
+        pElement.textContent = "Не удалось получить информацию о сервере.";
+        pElement.className = "offline";
+        console.error(error);
+      }
+    }
+
+    window.onload = getServerStatus;
+
         function copyText() {
             const textToCopy = "45.129.186.174:25589";
             navigator.clipboard.writeText(textToCopy)
