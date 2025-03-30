@@ -82,8 +82,8 @@
     <script>
 
       async function getServerStatus() {
-      const ip = "45.129.186.174";
-      const port = "25589";
+      const ip = "65.21.123.31";
+      const port = "25591";
       const pElement = document.getElementById("server-status");
 
       try {
@@ -105,7 +105,7 @@
     window.onload = getServerStatus;
 
         function copyText() {
-            const textToCopy = "45.129.186.174:25589";
+            const textToCopy = "65.21.123.31:25591";
             navigator.clipboard.writeText(textToCopy)
                 .then(() => {
                     alert("IP успешно скопирован!");
