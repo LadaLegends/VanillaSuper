@@ -6,11 +6,36 @@ body {
     background-color: #f8f9fa;
 }
 
-noscript {
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    padding: 5px;
+    transform: translateX(-50%);
+    width: 30%;
     text-align: center;
-    color: red;
-    font-size: 25px;
-    font-weight: 500;
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    text-wrap: balance;
+    border: 2px solid #00af5c;
+    background-color: #f3f3f3f0;
+    font-size: 16px;
+    line-height: 1.5;
+    box-shadow: 0px 0px 100px rgba(32, 32, 32, 0.082);
+    z-index: 100;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #181818;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 
 details {
@@ -106,17 +131,7 @@ details:hover {
     }
 }
 
-#server-status {
-    font-size: 16px;
-  }
-  .offline {
-    color: rgb(255, 85, 85);
-  }
-  .online {
-    color: rgb(146, 255, 146);
-  }
-
-#copy_ip {
+#copy_ip, #supports {
     color: white;
     z-index: 10;
     margin-top: 00px;
@@ -127,6 +142,22 @@ details:hover {
     background: #00af5c; 
     border-radius: 20px; 
     border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+#supports {
+    margin-top: 40px;
+    z-index: 10;
+    margin-left: 10px;
+    font-size: 18px; 
+    text-decoration: none; 
+    padding: 14px 34px; 
+    color: black;
+    background: white; 
+    border-radius: 20px; 
+    border: 2px solid #e2e2e2;
     cursor: pointer;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -167,6 +198,11 @@ details:hover {
 #copy_ip:hover {
     background: #00b962;
     transform: scale(1.03);
+}
+
+#supports:hover {
+    transform: scale(1.03);
+    border: 2px solid #00b962;
 }
 
 #our_telegram:hover {
@@ -224,7 +260,8 @@ details:hover {
     #copy_ip,
     #our_telegram,
     #our_wiki,
-    #open_popup {
+    #open_popup,
+    #supports {
         margin: 0;
         width: 90%;
         max-width: 320px;
@@ -250,7 +287,8 @@ details:hover {
     #copy_ip, 
     #our_telegram, 
     #our_wiki,
-    #open_popup {
+    #open_popup,
+    #supports {
         font-size: 16px; 
         padding: 10px 24px;
     }
@@ -270,7 +308,7 @@ details:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(12px); /* Эффект размытия */
+    backdrop-filter: blur(12px);
     background-color: rgba(0, 0, 0, 0.327);
     display: flex;
     justify-content: center;
@@ -279,7 +317,7 @@ details:hover {
 }
 
 .popup.hidden {
-    display: none; /* Скрытие окна */
+    display: none;
 }
 
 .popup-content {
