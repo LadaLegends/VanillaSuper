@@ -20,16 +20,22 @@
 
 <body>
 
+    <!-- <div class="notification">
+        <button class="close-btn" onclick="closeNotification()">×</button>
+        <p class="des" style="font-family: Golos Text; text-wrap: balance; text-align: center; margin-top: 20px">Эксперимент 512</p>
+        <p class="des" style="font-family: Golos Text; text-wrap: balance; text-align: center; margin-top: -17px;" id="server-status">
+            Получение статуса сервера...</p>
+    </div> -->
+
     <!-- <section>
         <div class="skewed"></div>
     </section> -->
 
-    <h1 class="title animate__animated animate__zoomIn" style="font-family: Unbounded; text-align: center; margin-top: 250px;">
+    <h1 class="title" style="font-family: Unbounded; text-align: center; margin-top: 250px;">
         VanillaSuper — <br>очевидно, крутой сервер.
     </h1>
-    <p class="des animate__animated animate__fadeIn" style="font-family: Golos Text; text-wrap: balance; text-align: center; margin-top: 20px">
+    <p class="des" style="font-family: Golos Text; text-wrap: balance; text-align: center; margin-top: 20px">
         Ванильность — наш приоритет. Версия 1.21.4, лицензия не обязательна.</p><br>
-    <noscript style="text-align: center; font-weight: 500">У вас выклюен JavaScript. Сайт может работать некорректно</noscript><br>
 
     <div class="center-container">
         <button style="user-select: none;" id="copy_ip" onclick="copyText()">Скопировать IP</button>
@@ -42,8 +48,6 @@
             <span style="margin-left: 95%;" id="close_popup" class="popup-close">&times;</span>
             <h2>Подробнее:</h2>
             <p style="text-wrap: balance;" >Мы — приватный ванильный Minecraft-сервер с небольшим, но сплочённым сообществом игроков.</p>
-<!--             <p class="des" style="font-family: Golos Text; text-wrap: balance; text-align: center; margin-top: -30px" id="server-status">
-                Получение статуса сервера...</p> -->
             <button style="user-select: none;" id="our_telegram">Наш Telegram</button>
             <button style="user-select: none;" id="our_wiki">Наша Вики</button>
             <button style="display: none;" class="close-btn">Закрыть</button>
@@ -77,20 +81,28 @@
         <p>Нет. В данный момент наш сервер не имеет такой возможности.</p>
     </details>
 
-    
+    <noscript>У вас выклюен JavaScript. Сайт может работать некорректно</noscript>
+
     <script>
 
+    function closeNotification() {
+        const notification = document.querySelector('.notification');
+        if (notification) {
+            notification.style.display = 'none'; // Скрываем окно уведомления
+        }
+    }
+
+
       async function getServerStatus() {
-      const ip = "65.21.123.31";
-      const port = "25591";
+      const ip = "vanillasuper.xyz";
       const pElement = document.getElementById("server-status");
 
       try {
-        const response = await fetch(`https://api.mcsrvstat.us/2/${ip}:${port}`);
+        const response = await fetch(`https://api.mcsrvstat.us/2/${ip}`);
         const data = await response.json();
 
         if (data.online) {
-          pElement.textContent = `Игроков онлайн: ${data.players.online} из ${data.players.max}`;
+          pElement.textContent = `Игроков онлайн: ${data.players.online}`;
         } else {
           pElement.textContent = "Сервер выключен.";
         }
