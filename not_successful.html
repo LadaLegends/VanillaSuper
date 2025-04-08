@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VanillaSuper</title>
+    <link rel="icon" type="image/png" href="fabicon-64x64.png">
+
+    <meta name="theme-color" content="#00b962">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+
+    <h1 class="title animate__animated animate__zoomIn" style="font-family: Unbounded; text-align: center; margin-top: 250px; color: rgb(230, 68, 68);font-size: 4em;">
+        Оплата не прошла
+    </h1>
+    <p class="des animate__animated animate__zoomIn" style="font-family: Golos Text; font-size: 1.3em; text-align: center; margin-top: -20px">
+        Упс! Попробуйте позже.
+    </p>
+    <!-- <div class="center-container">
+        <button style="padding: 14px 70px;" id="copy_ip">На главную</button>
+        <button style="padding: 14px 70px;" id="our_wiki">Поддержка</button>
+    </div> -->
+        
+    <script>
+
+    document.getElementById("copy_ip").onclick = function() {
+        window.location.href = "index.html";
+    };
+
+        document.getElementById("our_wiki").onclick = function() {
+            window.open("https://t.me/vssupports_bot", "_blank");
+        };
+    </script>
+
+</body>
+</html>
